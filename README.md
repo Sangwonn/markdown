@@ -1,8 +1,30 @@
 # markdown
 
-Tables| Are |Cool|
-----|----|----|
-col 1 is| left-aligned |$1600|
-col 2 is| centered |$12|
-col 3 is| right-aligned |$1|
+## Internet of Things Device Setup
 
+### Expected Hardware
+- <a href="https://www.canakit.com/raspberry-pi-4-4gb.html">Raspberry Pi 4.4GB with a case</a>
+- <a href="https://docs.arducam.com/cameras-for-raspberry-pi/native-raspberry-pi-cameras/5mp-ov5647-cameras/">5MP OV5647 PiCamera from Arducam</a>
+
+### Getting Started
+- Setup the Raspberry Pi case and Operating System by following the Getting Started section on page 3 at 
+  documentation/CanaKit-Raspberry-Pi-Quick-Start-Guide-4.0.pdf or
+  <a>https://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-4.0.pdf</a>
+  - With NOOBS, use the recommended operating system
+- Setup the PiCamera
+  - Assemble the PiCamera case from Arducam using documentation/Arducam-Case-Setup.pdf or
+    <a href="https://docs.arducam.com/Raspberry-Pi-Camera/Native-camera/5MP-OV5647/">http://www.arducam.com/docs/cameras-for-raspberry-pi/native-raspberry-pi-cameras/5mp-ov5647-cameras/</a>
+  - <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/2">Attach your PiCamera module to the Raspberry Pi and enable the camera Raspberry Pi App Installation & Execution</a>
+  
+
+### Respberry Pi App Installation & Execution
+Run these commands after cloning the project
+
+|Commands|Time to completion
+:----|:----
+sudo apt install -y libatlas-base-dev liblapacke-dev gfortran|1min
+sudo apt install -y libhdf5-dev libhdf5-103|1min
+pip3 install -r requirements.txt|1-3 mins
+wget "<a href="https://raw.githubusercontent.com/PINTO0309/Tensorflow-bin/master/tensorflow-2.4.0-cp37-none-linux_armv7l_download.sh">https://raw.githubusercontent.com/PINTO0309/Tensorflow-bin/master/tensorflow-2.4.0-cp37-none-linux_armv7l_download.sh"|less than 10 secs
+./tensorflow-2.4.0-cp37-none-linux_armv7l_download.sh</a>|less than 10 secs
+pip3 install tensorflow-2.4.0cp37-none-linux-armv7l.whl|1-3 mins
